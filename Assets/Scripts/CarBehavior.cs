@@ -3,9 +3,10 @@ using UnityEngine;
 public class CarBehavior : MonoBehaviour
 {
     private Rigidbody myRb;
-    public float speed;
-    public float turnSpeed;
-    public float reverseSpeed;
+    public float speed = 10f;
+    public float turnSpeed = 100f;
+    public float maxSpeed = 10f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,43 +15,38 @@ public class CarBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Drive();
-        } else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
-        {
-            Reverse();
-        }
-            Turn();
+        Drive();
+        Turn();
     }
 
     private void Drive()
     {
+        float move = Input.GetAxis("Vertical");
         Debug.Log("drive forward");
-        myRb.linearVelocity = transform.forward * speed;
+        Vector3 myVelocity = transform.forward * speed * move;
+        myVelocity.y = myRb.linearVelocity.y;
+
+        myRb.linearVelocity = myVelocity;
     }
 
-    private void Reverse()
-    {
-        myRb.linearVelocity = -transform.forward * reverseSpeed;
-    }
-
+    //ChatGPT assist to get car to turn only when moving
     private void Turn()
     {
-        //Turn Left
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Debug.Log("Turn Left");
-            myRb.angularVelocity = -transform.up * turnSpeed;
-        }
+        float turn = Input.GetAxis("Horizontal");
 
-        //Turn Right
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Debug.Log("Turn Right");
-            myRb.angularVelocity = transform.up * turnSpeed;
-        }
+        // Get forward speed along the car's forward axis
+        float forwardSpeed = Vector3.Dot(myRb.linearVelocity, transform.forward);
+
+        // Scale turn by speed
+        float speedFactor = Mathf.Clamp01(Mathf.Abs(forwardSpeed) / maxSpeed);
+
+        float turnAmount = turn * turnSpeed * speedFactor * Time.deltaTime;
+
+        // Reverse steering if going backward
+        if (forwardSpeed < 0) turnAmount = -turnAmount;
+
+        transform.Rotate(Vector3.up, turnAmount);
     }
 }
