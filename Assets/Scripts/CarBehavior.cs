@@ -24,7 +24,6 @@ public class CarBehavior : MonoBehaviour
     private void Drive()
     {
         float move = Input.GetAxis("Vertical");
-        Debug.Log("drive forward");
         Vector3 myVelocity = transform.forward * speed * move;
         myVelocity.y = myRb.linearVelocity.y;
 
