@@ -18,6 +18,10 @@ public class DrunkBar : MonoBehaviour
     private void Update()
     {
         SetDrunkBar();
+        if (drunkAmount >= drunkMaxAmount)
+        {
+            drunkAmount = drunkMaxAmount;
+        }
     }
 
     private IEnumerator GetSober(float delay)
@@ -30,6 +34,12 @@ public class DrunkBar : MonoBehaviour
     {
         drunkAmount -= drunkRate;
         StartCoroutine(GetSober(drunkTime));
+    }
+
+    public void GetDrunk(float addDrunk)
+    {
+        drunkAmount += addDrunk;
+        Debug.Log("drunk called");
     }
 
     private void SetDrunkBar()
