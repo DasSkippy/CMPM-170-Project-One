@@ -30,7 +30,6 @@ public class DrunkBar : MonoBehaviour
     {
         drunkAmount -= drunkRate;
         StartCoroutine(GetSober(drunkTime));
-        Debug.Log("idle called");
     }
 
     private void SetDrunkBar()
