@@ -1,0 +1,29 @@
+using UnityEngine;
+
+public class DamageBar : MonoBehaviour
+{
+    public Transform healthMeter;
+    private DamageBehavior damageBehavior;
+
+    private float maxHealth = 100f;
+
+    private void Start()
+    {
+        damageBehavior = FindFirstObjectByType<DamageBehavior>();
+    }
+
+    private void Update()
+    {
+        SetHealthBar();
+        //Debug
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            damageBehavior.TakeDamage();
+        }
+    }
+
+    private void SetHealthBar()
+    {
+        healthMeter.localScale = new Vector3 (6.4f * (damageBehavior.health / maxHealth), 1f, 1f);
+    }
+}
