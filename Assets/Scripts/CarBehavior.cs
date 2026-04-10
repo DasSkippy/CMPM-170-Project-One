@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarBehavior : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public class CarBehavior : MonoBehaviour
     public float speed = 10f;
     public float turnSpeed = 100f;
     public float maxSpeed = 10f;
+
+    public bool passengerLoaded = false;
+    public Image passengerImage;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,5 +51,12 @@ public class CarBehavior : MonoBehaviour
         if (forwardSpeed < 0) turnAmount = -turnAmount;
 
         transform.Rotate(Vector3.up, turnAmount);
+    }
+
+    public void LoadPassenger(PassengerInfo currentInfo)
+    {
+        passengerImage.gameObject.SetActive(true);
+        passengerLoaded = true;
+        passengerImage.sprite = currentInfo.image;
     }
 }
