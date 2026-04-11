@@ -11072,6 +11072,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 822022155139014788, guid: 88cc53dc7a626894e9d53d874e867b42, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1652
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641112076053463712, guid: 88cc53dc7a626894e9d53d874e867b42, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4248872323845744158, guid: 88cc53dc7a626894e9d53d874e867b42, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -13136,6 +13144,14 @@ PrefabInstance:
     - target: {fileID: 1577043045029986302, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924855967805551058, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924855967805551058, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
+      propertyPath: turnSpeed
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4924855967805551058, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
       propertyPath: passengerImage
