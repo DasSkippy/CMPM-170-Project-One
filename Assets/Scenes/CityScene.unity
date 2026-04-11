@@ -11076,6 +11076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4886757387881317802, guid: 88cc53dc7a626894e9d53d874e867b42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7214533520077426113, guid: 88cc53dc7a626894e9d53d874e867b42, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -13515,7 +13519,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8, y: -1.6, z: -66.5}
-  m_LocalScale: {x: 88.989, y: -0.8646994, z: 88.989}
+  m_LocalScale: {x: 88.989, y: 1, z: 88.989}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -22557,7 +22561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f416bd3b88798b4080b01b003b9d842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 1
+  rotationSpeed: 20
   daySkybox: {fileID: 2100000, guid: 99a400087584f4263b1a8979d6007ad4, type: 2}
   nightSkybox: {fileID: 2100000, guid: 94caf2ba4ca5e46bfaba53afcc8778dd, type: 2}
 --- !u!1001 &2054634060
@@ -23714,6 +23718,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 626544028}
   - {fileID: 920432631}
+  - {fileID: 1918047667}
   - {fileID: 2052341717}
   - {fileID: 1766033507}
   - {fileID: 1725896321}
@@ -23723,4 +23728,3 @@ SceneRoots:
   - {fileID: 1120811599}
   - {fileID: 8224063}
   - {fileID: 1153547957}
-  - {fileID: 1918047667}
