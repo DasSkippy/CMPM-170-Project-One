@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5859564747941430655}
   - component: {fileID: 712217007654742544}
   - component: {fileID: 833951997498175068}
+  - component: {fileID: 5258007429404552796}
   - component: {fileID: 4723754954765566993}
   m_Layer: 0
   m_Name: Passenger
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7237248088666786942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.12, y: 1.39, z: -47.8}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.72423, y: 0.94577193, z: 0.72423}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,6 +110,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5258007429404552796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7237248088666786942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.7882353, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &4723754954765566993
 MonoBehaviour:
   m_ObjectHideFlags: 0
