@@ -6,27 +6,31 @@ public class SunCycle : MonoBehaviour
 
     public Material daySkybox;
     public Material nightSkybox;
+    private Light sunlight;
+
+    private void Start()
+    {
+        sunlight = GetComponent<Light>();
+    }
 
     void Update()
     {
-        // Rotate the sun (your original behavior)
         transform.Rotate(rotationSpeed * Time.deltaTime, 0f, 0f);
 
-        // Get current X rotation (0–360)
         float xRotation = transform.eulerAngles.x;
 
-        // 🌅 Day when sun is above horizon
         if (xRotation > 0f && xRotation < 180f)
         {
+            sunlight.intensity = 2;
             if (RenderSettings.skybox != daySkybox)
             {
                 RenderSettings.skybox = daySkybox;
                 DynamicGI.UpdateEnvironment();
             }
         }
-        // 🌙 Night when sun is below horizon
         else
         {
+            sunlight.intensity = 0;
             if (RenderSettings.skybox != nightSkybox)
             {
                 RenderSettings.skybox = nightSkybox;

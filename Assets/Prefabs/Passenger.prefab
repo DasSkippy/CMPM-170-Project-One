@@ -144,14 +144,10 @@ MonoBehaviour:
   - name: Mark Zuckerberg
     image: {fileID: 21300000, guid: cb34286201fa5f94b98da30a6285a2d4, type: 3}
   - name: Sean
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: e72f55eeddcbe3f4592cd0506b65904c, type: 3}
   - name: Izzy
-    image: {fileID: 0}
-  - name: Nicholas
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: ec8523fecc68e85458f0948d4260eb5c, type: 3}
   - name: Nayanika
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: a52f2bd712cdc744fbcae2fc8d7ae2d2, type: 3}
   - name: Yahir
-    image: {fileID: 0}
-  - name: Bryce
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: df8ef26ef92d4c04d805f944d7003526, type: 3}

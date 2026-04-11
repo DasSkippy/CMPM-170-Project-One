@@ -18,9 +18,7 @@ public class PassangerBehavior : MonoBehaviour
 
     public void Start()
     {
-        //currentID = passengerID[Random.Range(0, passengerID.Count)];
-        Debug.Log(passengerID.Count);
-        currentID = passengerID[0];
+        currentID = passengerID[Random.Range(0, passengerID.Count)];
         carBehavior = FindFirstObjectByType<CarBehavior>();
     }
 
