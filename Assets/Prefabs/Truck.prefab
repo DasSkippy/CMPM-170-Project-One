@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5542145596182107926}
   - component: {fileID: 1682244732269567568}
   - component: {fileID: 5592193108388126210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Reverse Rear Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8593531605526968309}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 6222338516806479873}
   - component: {fileID: 2421277447534438062}
   - component: {fileID: 1537476238301657069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Headlight Low Beam Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 7397618136972438586}
   - component: {fileID: 5249930744951911400}
   - component: {fileID: 6212011443759174398}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left Low Beam Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 4354139923089366677}
   - component: {fileID: 4390957353322466224}
   - component: {fileID: 3420127261422132}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trunk Hatch Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 5258899411129915488}
   - component: {fileID: 450917352241369518}
   - component: {fileID: 5325618195267620621}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Arch Rear Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 7853851078341706969}
   - component: {fileID: 4040021935909710451}
   - component: {fileID: 2995437615595794883}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 5922833534229533556}
   - component: {fileID: 8762281838109599042}
   - component: {fileID: 9015640030825848435}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 3482577147323642625}
   - component: {fileID: 2477902657062718360}
   - component: {fileID: 1924140953246827052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front Right Wheel Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 4856833575922162962}
   - component: {fileID: 3809777751982506422}
   - component: {fileID: 6380379780230938836}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Rear Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -986,7 +986,7 @@ GameObject:
   - component: {fileID: 4364024129535882621}
   - component: {fileID: 7630058227946495416}
   - component: {fileID: 7631131155142900422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1100,7 +1100,7 @@ GameObject:
   - component: {fileID: 1852602082048393628}
   - component: {fileID: 194424082016849342}
   - component: {fileID: 2303899682730250956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Placeholder Front Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 5600860316300667891}
   - component: {fileID: 7522956398933877336}
   - component: {fileID: 1447643354843353076}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Turn Signal Front Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 7282105938347799116}
   - component: {fileID: 4924855967805551058}
   - component: {fileID: 7625398373086822015}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Truck
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -1344,6 +1344,8 @@ MonoBehaviour:
   speed: 10
   turnSpeed: 100
   maxSpeed: 10
+  passengerLoaded: 0
+  passengerImage: {fileID: 0}
 --- !u!114 &7625398373086822015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,7 +1370,7 @@ GameObject:
   - component: {fileID: 5659822233764189236}
   - component: {fileID: 2747741375660325533}
   - component: {fileID: 408194818570271091}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Turn Signal Side Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1456,7 @@ GameObject:
   - component: {fileID: 4909844189615215426}
   - component: {fileID: 3366673039949212600}
   - component: {fileID: 277477336395420368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bumper Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1540,7 +1542,7 @@ GameObject:
   - component: {fileID: 8050130132564607042}
   - component: {fileID: 7128894509771490996}
   - component: {fileID: 1277371287917927566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Mesh Rear Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1627,7 +1629,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1480006219457336526}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1680,7 +1682,7 @@ GameObject:
   - component: {fileID: 7123164535101138446}
   - component: {fileID: 4640186913763512663}
   - component: {fileID: 8693558413766855965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Light Handbrake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1766,7 +1768,7 @@ GameObject:
   - component: {fileID: 351995503134311687}
   - component: {fileID: 321205433992392741}
   - component: {fileID: 7001073070262521026}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Splitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1852,7 +1854,7 @@ GameObject:
   - component: {fileID: 1537111589467396372}
   - component: {fileID: 106334916986464120}
   - component: {fileID: 1766196984057429873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Mesh Front Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1939,7 +1941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2287198251644065469}
   - component: {fileID: 4323713905819818562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Engine Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2067,7 +2069,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4704697785023496019}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2111,7 +2113,7 @@ GameObject:
   - component: {fileID: 7210673069761093168}
   - component: {fileID: 5789535950930159507}
   - component: {fileID: 455664565889987110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rear Left Wheel Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2295,7 +2297,7 @@ GameObject:
   - component: {fileID: 4334663318546594590}
   - component: {fileID: 3378916886140738405}
   - component: {fileID: 8201962059848898150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Debug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2381,7 +2383,7 @@ GameObject:
   - component: {fileID: 8051233123378572445}
   - component: {fileID: 59201014893030915}
   - component: {fileID: 6146743294766899717}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Headlight High Beam Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2467,7 +2469,7 @@ GameObject:
   - component: {fileID: 1852680862810959749}
   - component: {fileID: 6872131219471359063}
   - component: {fileID: 3725269742296854051}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Steering Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2553,7 +2555,7 @@ GameObject:
   - component: {fileID: 5884352840859288003}
   - component: {fileID: 2761466341873082589}
   - component: {fileID: 6081194323069127122}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Windshield Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2639,7 +2641,7 @@ GameObject:
   - component: {fileID: 5286600853374496610}
   - component: {fileID: 1972540194959710542}
   - component: {fileID: 2162228643314727203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Placeholder Front Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2725,7 +2727,7 @@ GameObject:
   - component: {fileID: 7293834771330026183}
   - component: {fileID: 738055962106094892}
   - component: {fileID: 1687517006051172638}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Turn Signal Rear Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2811,7 +2813,7 @@ GameObject:
   - component: {fileID: 150298907352855490}
   - component: {fileID: 801159534024062221}
   - component: {fileID: 6094425548519746956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Left Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2897,7 +2899,7 @@ GameObject:
   - component: {fileID: 1854566990727912097}
   - component: {fileID: 2848042657996327600}
   - component: {fileID: 5418367894419809969}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Brake Rear Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2983,7 +2985,7 @@ GameObject:
   - component: {fileID: 6341853576125534350}
   - component: {fileID: 5689385999168121467}
   - component: {fileID: 6945226363086753462}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Mesh Rear Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3073,7 +3075,7 @@ GameObject:
   - component: {fileID: 7488565630589935166}
   - component: {fileID: 8454224044333490648}
   - component: {fileID: 6100375815312274750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body Hood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3182,7 +3184,7 @@ GameObject:
   - component: {fileID: 5884299310817585453}
   - component: {fileID: 7412959439037388261}
   - component: {fileID: 746143758997264236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3278,7 +3280,7 @@ GameObject:
   - component: {fileID: 3138797528480639110}
   - component: {fileID: 8790356434879496554}
   - component: {fileID: 8984498652134554791}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Headlight High Beam Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3362,7 +3364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1105283663538173574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bumpers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3397,7 +3399,7 @@ GameObject:
   - component: {fileID: 5795586364274458448}
   - component: {fileID: 2311911576991923243}
   - component: {fileID: 3062954472359866722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Handbrake Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3481,7 +3483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5696863988515768832}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Misc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3517,7 +3519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9142081133669276459}
   - component: {fileID: 5379459460917416268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left Back Wheel Arch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3571,7 +3573,7 @@ GameObject:
   - component: {fileID: 8057704626250125015}
   - component: {fileID: 8671686757647673857}
   - component: {fileID: 2529309324049548399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3658,7 +3660,7 @@ GameObject:
   - component: {fileID: 3556585335936124665}
   - component: {fileID: 3337078356596167676}
   - component: {fileID: 6702981109311725913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Dashboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3743,7 +3745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9166181373701823973}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3778,7 +3780,7 @@ GameObject:
   - component: {fileID: 884544169737226773}
   - component: {fileID: 2604244056014262905}
   - component: {fileID: 8293488979418373149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right High Beam Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3897,7 +3899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1141826510220168690}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spotlights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3934,7 +3936,7 @@ GameObject:
   - component: {fileID: 5592167709373702432}
   - component: {fileID: 3989473091314741958}
   - component: {fileID: 2859907116055983017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Rear Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4020,7 +4022,7 @@ GameObject:
   - component: {fileID: 2873311559062997155}
   - component: {fileID: 2143712266822000852}
   - component: {fileID: 4843662015668473956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Right Inner Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4105,7 +4107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8080710322423459988}
   - component: {fileID: 8637773459313157685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tire Sounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4235,7 +4237,7 @@ GameObject:
   - component: {fileID: 9222636675464873388}
   - component: {fileID: 4816627451807964315}
   - component: {fileID: 5483282408728206278}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Debug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4319,7 +4321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6072086778658510521}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4358,7 +4360,7 @@ GameObject:
   - component: {fileID: 2453928962731645106}
   - component: {fileID: 5519952459448370888}
   - component: {fileID: 4643513471249313362}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Light Turn Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4444,7 +4446,7 @@ GameObject:
   - component: {fileID: 8723110520532654967}
   - component: {fileID: 5244898969952928657}
   - component: {fileID: 2229044154143137424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Right Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4530,7 +4532,7 @@ GameObject:
   - component: {fileID: 2491823920262033941}
   - component: {fileID: 8007187590453681025}
   - component: {fileID: 981432874616991427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Left Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4617,7 +4619,7 @@ GameObject:
   - component: {fileID: 6401480673778445721}
   - component: {fileID: 7312397677585943811}
   - component: {fileID: 97857594135193121}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bumper Rear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4704,7 +4706,7 @@ GameObject:
   - component: {fileID: 9062701404756855637}
   - component: {fileID: 6888705742704951372}
   - component: {fileID: 5798828998438011129}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rear Right Wheel Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4888,7 +4890,7 @@ GameObject:
   - component: {fileID: 6643549854522440816}
   - component: {fileID: 1105003883408311300}
   - component: {fileID: 2344811757073334851}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Arch Front Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4974,7 +4976,7 @@ GameObject:
   - component: {fileID: 6171304495690101333}
   - component: {fileID: 4002739036021907993}
   - component: {fileID: 5800442778952346681}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right Low Beam Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5095,7 +5097,7 @@ GameObject:
   - component: {fileID: 1942212610994820428}
   - component: {fileID: 9041744478717015468}
   - component: {fileID: 2698480143087672}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Lever Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5181,7 +5183,7 @@ GameObject:
   - component: {fileID: 924410761419238712}
   - component: {fileID: 8372608700541771635}
   - component: {fileID: 7065916426121008153}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Reverse Rear Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5267,7 +5269,7 @@ GameObject:
   - component: {fileID: 6688524166446014017}
   - component: {fileID: 7307336799859367910}
   - component: {fileID: 5662835272921604712}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Handbrake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5355,7 +5357,7 @@ GameObject:
   - component: {fileID: 5869263185351363496}
   - component: {fileID: 5137863025350194578}
   - component: {fileID: 9069785532937283067}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Lever Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5441,7 +5443,7 @@ GameObject:
   - component: {fileID: 4605959204764028332}
   - component: {fileID: 2739922480128404956}
   - component: {fileID: 9123089363061555426}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Light Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5528,7 +5530,7 @@ GameObject:
   - component: {fileID: 8955891307114735176}
   - component: {fileID: 1066018611797031886}
   - component: {fileID: 4132089230158587718}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5615,7 +5617,7 @@ GameObject:
   - component: {fileID: 4254180984818004478}
   - component: {fileID: 1824730053615920378}
   - component: {fileID: 1451507706680478314}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Turn Signal Side Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5701,7 +5703,7 @@ GameObject:
   - component: {fileID: 5007267812781613425}
   - component: {fileID: 8527093029383847609}
   - component: {fileID: 2985170692065041240}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Steering Wheel Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5787,7 +5789,7 @@ GameObject:
   - component: {fileID: 5464610647926869967}
   - component: {fileID: 7304830315266308551}
   - component: {fileID: 8020062480233928580}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Turn Signal Front Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5872,7 +5874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8013423637341936022}
   - component: {fileID: 7333334984118056}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5926,7 +5928,7 @@ GameObject:
   - component: {fileID: 6393391763274260417}
   - component: {fileID: 288624832614868216}
   - component: {fileID: 1904046446574140540}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Left Inner Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6012,7 +6014,7 @@ GameObject:
   - component: {fileID: 2682029224002612565}
   - component: {fileID: 6856247248984549026}
   - component: {fileID: 7024858442646226999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Light Turn Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6098,7 +6100,7 @@ GameObject:
   - component: {fileID: 6514181823572068732}
   - component: {fileID: 3199878360116060651}
   - component: {fileID: 5874659297632113380}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Arch Rear Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6183,7 +6185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030197709559103889}
   - component: {fileID: 2240208933800046723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6238,7 +6240,7 @@ GameObject:
   - component: {fileID: 7840888144665841027}
   - component: {fileID: 563196387648879952}
   - component: {fileID: 2258050385318588320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6351,7 +6353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5291428992907297906}
   - component: {fileID: 1999735830964497101}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right Back Wheel Arch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6405,7 +6407,7 @@ GameObject:
   - component: {fileID: 4567360105793693308}
   - component: {fileID: 7557036003028244980}
   - component: {fileID: 1779289376893380462}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Left Hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6491,7 +6493,7 @@ GameObject:
   - component: {fileID: 936666734789327323}
   - component: {fileID: 8166908850282686823}
   - component: {fileID: 3977364629044171538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Accelerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6577,7 +6579,7 @@ GameObject:
   - component: {fileID: 4874448323460949292}
   - component: {fileID: 2856616027889122318}
   - component: {fileID: 2119458497256163522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6672,7 +6674,7 @@ GameObject:
   - component: {fileID: 7096395007163821792}
   - component: {fileID: 6568197412711639774}
   - component: {fileID: 450015405200086377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Mesh Front Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6760,7 +6762,7 @@ GameObject:
   - component: {fileID: 405130081341382281}
   - component: {fileID: 8407961378477881646}
   - component: {fileID: 7961606219457776700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Seat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6847,7 +6849,7 @@ GameObject:
   - component: {fileID: 3484816117700734261}
   - component: {fileID: 8906972435355184294}
   - component: {fileID: 8461225252359251476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Arch Front Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6934,7 +6936,7 @@ GameObject:
   - component: {fileID: 2636955379493008164}
   - component: {fileID: 2571256861734085117}
   - component: {fileID: 8884394222611225703}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front Left Wheel Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7118,7 +7120,7 @@ GameObject:
   - component: {fileID: 4503695515700980073}
   - component: {fileID: 2332368474415034833}
   - component: {fileID: 2185991023942150851}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Right Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7204,7 +7206,7 @@ GameObject:
   - component: {fileID: 8440282576315362350}
   - component: {fileID: 8443335372272853429}
   - component: {fileID: 3839780133507873396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Placeholder Rear Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7290,7 +7292,7 @@ GameObject:
   - component: {fileID: 5661105584146018856}
   - component: {fileID: 2677983668649153053}
   - component: {fileID: 590410361490161028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Headlight Low Beam Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7376,7 +7378,7 @@ GameObject:
   - component: {fileID: 3362711982647561978}
   - component: {fileID: 2105652526440982201}
   - component: {fileID: 8231612855287734116}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Right Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7462,7 +7464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3806079536718100113}
   - component: {fileID: 7934861905422757438}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7516,7 +7518,7 @@ GameObject:
   - component: {fileID: 4008670482339037551}
   - component: {fileID: 5710900102356303970}
   - component: {fileID: 1652636674986393863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Windshield Rear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7602,7 +7604,7 @@ GameObject:
   - component: {fileID: 1102261857563504229}
   - component: {fileID: 6731201884359053123}
   - component: {fileID: 2567242048777852125}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left High Beam Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7723,7 +7725,7 @@ GameObject:
   - component: {fileID: 5158712525676522034}
   - component: {fileID: 3525825098419733419}
   - component: {fileID: 8066297358421071427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drivetrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7807,7 +7809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3937714182386119928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7856,7 +7858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3204669195778624465}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7889,7 +7891,7 @@ GameObject:
   - component: {fileID: 4161998778927652607}
   - component: {fileID: 8868278727619800662}
   - component: {fileID: 7644976152319189652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Brake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7975,7 +7977,7 @@ GameObject:
   - component: {fileID: 7294728529602843712}
   - component: {fileID: 5286794710814974829}
   - component: {fileID: 7463713946127808620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Brake Roof Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8062,7 +8064,7 @@ GameObject:
   - component: {fileID: 6832670462122328353}
   - component: {fileID: 62693615440743113}
   - component: {fileID: 2068000716243012367}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Placeholder Rear Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8146,7 +8148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5984439791878512959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8187,7 +8189,7 @@ GameObject:
   - component: {fileID: 4681138273952991518}
   - component: {fileID: 3799005734640635870}
   - component: {fileID: 404570392948807668}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Left Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8273,7 +8275,7 @@ GameObject:
   - component: {fileID: 8241492540373726260}
   - component: {fileID: 6754981626328078726}
   - component: {fileID: 7101503922606076928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Turn Signal Rear Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8359,7 +8361,7 @@ GameObject:
   - component: {fileID: 7145460486895660384}
   - component: {fileID: 9194818170358669196}
   - component: {fileID: 5746170704198459701}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Right Hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8443,7 +8445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3514848253161265687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Arches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8481,7 +8483,7 @@ GameObject:
   - component: {fileID: 5639963726821297661}
   - component: {fileID: 6419850100727496147}
   - component: {fileID: 8851050450470858687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body Trunk Hatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8590,7 +8592,7 @@ GameObject:
   - component: {fileID: 4417061453784164652}
   - component: {fileID: 8369075490177693568}
   - component: {fileID: 8287314181963487826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Light High Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8676,7 +8678,7 @@ GameObject:
   - component: {fileID: 9046380423343315449}
   - component: {fileID: 7444617671137391312}
   - component: {fileID: 327309651562767837}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Light Low Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8762,7 +8764,7 @@ GameObject:
   - component: {fileID: 3912471495412881297}
   - component: {fileID: 2461938721851572859}
   - component: {fileID: 6285981163085930105}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interior Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8848,7 +8850,7 @@ GameObject:
   - component: {fileID: 3682351283275899042}
   - component: {fileID: 5651105514105580335}
   - component: {fileID: 6147289018058894577}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Brake Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8934,7 +8936,7 @@ GameObject:
   - component: {fileID: 3567370142426465041}
   - component: {fileID: 6234107237520624444}
   - component: {fileID: 532748747326594399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light Brake Rear Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9018,7 +9020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7317840357637034442}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
