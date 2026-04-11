@@ -22561,7 +22561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f416bd3b88798b4080b01b003b9d842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
+  rotationSpeed: 1
   daySkybox: {fileID: 2100000, guid: 99a400087584f4263b1a8979d6007ad4, type: 2}
   nightSkybox: {fileID: 2100000, guid: 94caf2ba4ca5e46bfaba53afcc8778dd, type: 2}
 --- !u!1001 &2054634060
