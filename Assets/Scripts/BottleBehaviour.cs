@@ -4,21 +4,26 @@ public class BottleBehaviour : MonoBehaviour
 {
     private DrunkBar drunkBar;
     public float addDrunk;
+    private bool collected = false;
+
+    private PowerupSpawns powerupSpawns;
 
     void Start()
     {
         drunkBar = FindFirstObjectByType<DrunkBar>();
+        powerupSpawns = FindFirstObjectByType<PowerupSpawns>();
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Car"))
         {
-            Debug.Log("triggered");
-            if (drunkBar != null)
+            if (drunkBar != null && !collected)
             {
                 drunkBar.GetDrunk(addDrunk);
                 Destroy(gameObject);
+                powerupSpawns.currentBottles--;
+                collected = true;
             }
         }
     }
