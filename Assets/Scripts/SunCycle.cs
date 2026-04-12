@@ -8,6 +8,8 @@ public class SunCycle : MonoBehaviour
     public Material nightSkybox;
     private Light sunlight;
 
+    public GameObject headlights;
+
     private void Start()
     {
         sunlight = GetComponent<Light>();
@@ -19,8 +21,10 @@ public class SunCycle : MonoBehaviour
 
         float xRotation = transform.eulerAngles.x;
 
+        //Day
         if (xRotation > 0f && xRotation < 180f)
         {
+            headlights.SetActive(false);
             sunlight.intensity = 2;
             if (RenderSettings.skybox != daySkybox)
             {
@@ -30,6 +34,8 @@ public class SunCycle : MonoBehaviour
         }
         else
         {
+            //Night
+            headlights.SetActive(true);
             sunlight.intensity = 0;
             if (RenderSettings.skybox != nightSkybox)
             {

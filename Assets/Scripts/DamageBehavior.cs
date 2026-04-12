@@ -8,7 +8,7 @@ public class DamageBehavior : MonoBehaviour
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
-            Debug.Log(collision.gameObject.name);
+            Debug.Log("You hit " + collision.gameObject.name);
             TakeDamage();
         }
     }

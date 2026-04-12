@@ -7524,7 +7524,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1044852534836548245, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.06273
+      value: 20.83
       objectReference: {fileID: 0}
     - target: {fileID: 1044852534836548245, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7532,7 +7532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1044852534836548245, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -65.154335
+      value: -33.753
       objectReference: {fileID: 0}
     - target: {fileID: 1044852534836548245, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13331,7 +13331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1577043045029986302, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.49273
+      value: 21.26
       objectReference: {fileID: 0}
     - target: {fileID: 1577043045029986302, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13339,7 +13339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1577043045029986302, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -65.154335
+      value: -33.753
       objectReference: {fileID: 0}
     - target: {fileID: 1577043045029986302, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13367,6 +13367,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1577043045029986302, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237991640389743140, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4924855967805551058, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
@@ -23119,6 +23123,7 @@ MonoBehaviour:
   rotationSpeed: 1
   daySkybox: {fileID: 2100000, guid: 99a400087584f4263b1a8979d6007ad4, type: 2}
   nightSkybox: {fileID: 2100000, guid: 94caf2ba4ca5e46bfaba53afcc8778dd, type: 2}
+  headlights: {fileID: 0}
 --- !u!1001 &2054634060
 PrefabInstance:
   m_ObjectHideFlags: 0
