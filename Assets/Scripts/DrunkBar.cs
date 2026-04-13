@@ -14,7 +14,7 @@ public class DrunkBar : MonoBehaviour
     private void Start()
     {
         drunkAmount = drunkMaxAmount;
-        StartCoroutine(GetSober(drunkTime));
+        StartCoroutine(GetSober());
         gameManager = FindFirstObjectByType<GameManager>();
     }
 
@@ -32,16 +32,14 @@ public class DrunkBar : MonoBehaviour
         }
     }
 
-    private IEnumerator GetSober(float delay)
+    private IEnumerator GetSober()
     {
-        yield return new WaitForSeconds(delay);
-        IdleSober();
-    }
-
-    private void IdleSober()
-    {
-        drunkAmount -= drunkRate;
-        StartCoroutine(GetSober(drunkTime));
+        while (true)
+        {
+            yield return new WaitForSeconds(drunkTime);
+            Debug.Log("sober");
+            drunkAmount -= drunkRate;
+        }
     }
 
     public void GetDrunk(float addDrunk)
