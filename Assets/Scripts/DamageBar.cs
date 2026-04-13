@@ -24,6 +24,9 @@ public class DamageBar : MonoBehaviour
 
     private void SetHealthBar()
     {
+        float healthScalex = 6.4f * (damageBehavior.health / maxHealth);
+        if (healthScalex > 6.4f)
+            healthScalex = 6.4f;
         healthMeter.localScale = new Vector3 (6.4f * (damageBehavior.health / maxHealth), 1f, 1f);
     }
 }

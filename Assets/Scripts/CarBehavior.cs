@@ -34,7 +34,7 @@ public class CarBehavior : MonoBehaviour
         myRb.linearVelocity = myVelocity;
     }
 
-    //ChatGPT assist to get car to turn only when moving
+    //ChatGPT assisted with Turn() to get car to turn only when moving
     private void Turn()
     {
         float turn = Input.GetAxis("Horizontal");
