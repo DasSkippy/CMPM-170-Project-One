@@ -8,15 +8,20 @@ public class DrunkBlurController : MonoBehaviour
     [SerializeField] private DrunkBar drunkBar;
     [SerializeField] private Volume volume;
 
+    [Header("Meter Mapping")]
+    [SerializeField] private bool invertMeter;
+    [SerializeField] private AnimationCurve responseCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
+
     [Header("Motion Blur")]
     [SerializeField] private bool useMotionBlur = true;
     [SerializeField] private float minMotionBlur = 0f;
-    [SerializeField] private float maxMotionBlur = 0.7f;
+    [SerializeField] private float maxMotionBlur = 0.9f;
+    [SerializeField] private bool forceHighQualityMotionBlur = true;
 
     [Header("Depth Of Field (optional)")]
     [SerializeField] private bool useDepthOfField;
     [SerializeField] private float minDoFBlur = 0f;
-    [SerializeField] private float maxDoFBlur = 1f;
+    [SerializeField] private float maxDoFBlur = 1.5f;
 
     private MotionBlur motionBlur;
     private DepthOfField depthOfField;
@@ -58,9 +63,19 @@ public class DrunkBlurController : MonoBehaviour
         if (drunkBar.drunkMaxAmount > 0f)
             t = Mathf.Clamp01(drunkBar.drunkAmount / drunkBar.drunkMaxAmount);
 
+        if (invertMeter)
+            t = 1f - t;
+
+        t = Mathf.Clamp01(responseCurve.Evaluate(t));
+
         if (useMotionBlur && motionBlur != null)
         {
             motionBlur.active = true;
+            if (forceHighQualityMotionBlur)
+            {
+                motionBlur.quality.overrideState = true;
+                motionBlur.quality.value = MotionBlurQuality.High;
+            }
             motionBlur.intensity.overrideState = true;
             motionBlur.intensity.value = Mathf.Lerp(minMotionBlur, maxMotionBlur, t);
         }
