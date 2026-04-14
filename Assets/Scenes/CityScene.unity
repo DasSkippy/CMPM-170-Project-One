@@ -7829,6 +7829,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera Midpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 6837034716030152567, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837034716030152567, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837034716030152567, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837034716030152567, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837034716030152567, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837034716030152567, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7604518817739837084, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
       propertyPath: cameraPosition
       value: 
@@ -7836,7 +7860,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 961588813802166570, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2098745172}
   m_SourcePrefab: {fileID: 100100000, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
 --- !u!1001 &631697655
 PrefabInstance:
@@ -13586,7 +13613,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1119878678570151021, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1714071771}
   m_SourcePrefab: {fileID: 100100000, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
 --- !u!4 &1124814566 stripped
 Transform:
@@ -20177,6 +20207,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 610692332787289416, guid: 9fa52852d69b91f4f8edf417ef7a5c32, type: 3}
   m_PrefabInstance: {fileID: 795579978}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1714071766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1119878678570151021, guid: ebb9626695af78549aea3ae4a4e1085b, type: 3}
+  m_PrefabInstance: {fileID: 1120811599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1714071771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714071766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de108b35b1fec954fb95f783582e34e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drunkBar: {fileID: 0}
+  minSwerveInterval: 1
+  maxSwerveInterval: 4
+  maxSwerveAngle: 30
+  swerveSmoothness: 3
 --- !u!1001 &1725243511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24707,6 +24759,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7652878315233739181, guid: 83d8d52aec4c1b14094bbdcf57836a31, type: 3}
   m_PrefabInstance: {fileID: 2089578453}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2098745167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 961588813802166570, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
+  m_PrefabInstance: {fileID: 626544028}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2098745172
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098745167}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86e8df689ac4d88438936dc81926c25f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &2100843039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 610692332787289416, guid: 9fa52852d69b91f4f8edf417ef7a5c32, type: 3}
