@@ -4,8 +4,8 @@ using System.Collections;
 public class DrunkBehavior : MonoBehaviour
 {
     public Animator eyesAnimator;
-    public float minBlinkTime;
-    public float maxBlinkTime;
+    public float minBlinkTime = 10f;
+    public float maxBlinkTime = 50f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

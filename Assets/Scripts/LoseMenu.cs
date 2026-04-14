@@ -40,6 +40,6 @@ public class LoseMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Main Menu");
     }
 }
