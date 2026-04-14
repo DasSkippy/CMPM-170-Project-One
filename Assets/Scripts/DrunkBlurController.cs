@@ -20,11 +20,24 @@ public class DrunkBlurController : MonoBehaviour
 
     [Header("Depth Of Field (optional)")]
     [SerializeField] private bool useDepthOfField;
-    [SerializeField] private float minDoFBlur = 0f;
-    [SerializeField] private float maxDoFBlur = 1.5f;
+    [SerializeField] private bool useSharedCurveForDepthOfField;
+    [SerializeField] private float soberBokehFocusDistance = 0f;
+    [SerializeField] private float soberBokehFocalLength = 1f;
+    [SerializeField] private float soberBokehAperture = 16f;
+    [SerializeField] private float maxBokehFocusDistance = 500f;
+    [SerializeField] private float focusDistanceEasePower = 2.5f;
+    [SerializeField] private float maxBokehFocalLength = 300f;
+    [SerializeField] private float maxBokehAperture = 1f;
+
+    [Header("Lens Distortion (optional)")]
+    [SerializeField] private bool useLensDistortion = true;
+    [SerializeField] private bool invertLensDistortionMeter = true;
+    [SerializeField] private float soberLensDistortionIntensity = 0f;
+    [SerializeField] private float maxLensDistortionIntensity = 0.75f;
 
     private MotionBlur motionBlur;
     private DepthOfField depthOfField;
+    private LensDistortion lensDistortion;
 
     private void Awake()
     {
@@ -47,11 +60,18 @@ public class DrunkBlurController : MonoBehaviour
         if (useDepthOfField)
             volume.profile.TryGet(out depthOfField);
 
+        if (useLensDistortion)
+            volume.profile.TryGet(out lensDistortion);
+
         if (useMotionBlur && motionBlur == null)
             Debug.LogWarning("DrunkBlurController: MotionBlur override not found in Volume Profile.");
 
         if (useDepthOfField && depthOfField == null)
             Debug.LogWarning("DrunkBlurController: DepthOfField override not found in Volume Profile.");
+
+        if (useLensDistortion && lensDistortion == null)
+            Debug.LogWarning("DrunkBlurController: LensDistortion override not found in Volume Profile.");
+
     }
 
     private void Update()
@@ -59,9 +79,11 @@ public class DrunkBlurController : MonoBehaviour
         if (drunkBar == null)
             return;
 
-        float t = 0f;
+        float rawT = 0f;
         if (drunkBar.drunkMaxAmount > 0f)
-            t = Mathf.Clamp01(drunkBar.drunkAmount / drunkBar.drunkMaxAmount);
+            rawT = Mathf.Clamp01(drunkBar.drunkAmount / drunkBar.drunkMaxAmount);
+
+        float t = rawT;
 
         if (invertMeter)
             t = 1f - t;
@@ -82,18 +104,34 @@ public class DrunkBlurController : MonoBehaviour
 
         if (useDepthOfField && depthOfField != null)
         {
+            float dofSourceT = 1f - rawT;
+            float dofT = useSharedCurveForDepthOfField
+                ? Mathf.Clamp01(responseCurve.Evaluate(dofSourceT))
+                : dofSourceT;
+            float focusMax = maxBokehFocusDistance > 1f ? maxBokehFocusDistance : 500f;
+            float easedFocusT = Mathf.Pow(dofSourceT, Mathf.Max(1f, focusDistanceEasePower));
+
             depthOfField.active = true;
             depthOfField.mode.overrideState = true;
-            depthOfField.mode.value = DepthOfFieldMode.Gaussian;
+            depthOfField.mode.value = DepthOfFieldMode.Bokeh;
 
-            depthOfField.gaussianStart.overrideState = true;
-            depthOfField.gaussianEnd.overrideState = true;
-            depthOfField.gaussianMaxRadius.overrideState = true;
+            depthOfField.focusDistance.overrideState = true;
+            depthOfField.focalLength.overrideState = true;
+            depthOfField.aperture.overrideState = true;
 
-            // Pull the in-focus range closer and increase blur radius as drunkness rises.
-            depthOfField.gaussianStart.value = 0.1f;
-            depthOfField.gaussianEnd.value = Mathf.Lerp(60f, 2f, t);
-            depthOfField.gaussianMaxRadius.value = Mathf.Lerp(minDoFBlur, maxDoFBlur, t);
+            // Force focus to start at 0 when fully drunk, then increase as the player sobers up.
+            depthOfField.focusDistance.value = Mathf.Lerp(0f, focusMax, easedFocusT);
+            depthOfField.focalLength.value = Mathf.Lerp(soberBokehFocalLength, maxBokehFocalLength, dofT);
+            depthOfField.aperture.value = Mathf.Lerp(soberBokehAperture, maxBokehAperture, dofT);
+        }
+
+        if (useLensDistortion && lensDistortion != null)
+        {
+            float lensSourceT = invertLensDistortionMeter ? 1f - rawT : rawT;
+            float lensT = Mathf.Clamp01(responseCurve.Evaluate(lensSourceT));
+            lensDistortion.active = true;
+            lensDistortion.intensity.overrideState = true;
+            lensDistortion.intensity.value = Mathf.Lerp(soberLensDistortionIntensity, maxLensDistortionIntensity, lensT);
         }
     }
 }
