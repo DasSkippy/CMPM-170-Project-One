@@ -29,7 +29,7 @@ public class DrunkBar : MonoBehaviour
         if (drunkAmount <= 0)
         {
             drunkAmount = 0;
-            gameManager.Lose();
+            gameManager.Lose(0);
         }
     }
 

@@ -4,21 +4,29 @@ public class DamageBar : MonoBehaviour
 {
     public Transform healthMeter;
     private DamageBehavior damageBehavior;
+    private GameManager gameManager;
+
+    private bool lost;
 
     private float maxHealth = 100f;
 
     private void Start()
     {
         damageBehavior = FindFirstObjectByType<DamageBehavior>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     private void Update()
     {
         SetHealthBar();
-        //Debug
-        if (Input.GetKeyDown(KeyCode.H))
+        if(damageBehavior.health >= maxHealth)
         {
-            damageBehavior.TakeDamage();
+            damageBehavior.health = maxHealth;
+        } else if (damageBehavior.health <= 0 && !lost)
+        {
+            lost = true;
+            damageBehavior.health = 0;
+            gameManager.Lose(1);
         }
     }
 

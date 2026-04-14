@@ -22743,6 +22743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passengersDroppedOff: 0
   myText: {fileID: 3364235889281767295}
+  loseMenu: {fileID: 2675442417053136379}
   gamePaused: 0
   inGameUI: {fileID: 6619675092217621931}
   pauseUI: {fileID: 941139076344117391}
@@ -22795,6 +22796,7 @@ MonoBehaviour:
   drunkMeter: {fileID: 1834006758156967640}
   drunkAmount: 0
   drunkRate: 1
+  drunkRateIncrease: 1.1
   drunkTime: 0.5
   drunkMaxAmount: 100
 --- !u!114 &1918047670
@@ -25840,7 +25842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &604741818384748876
 GameObject:
   m_ObjectHideFlags: 0
@@ -25853,7 +25855,7 @@ GameObject:
   - component: {fileID: 5364790030195065231}
   - component: {fileID: 3111268280157062938}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27137,7 +27139,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myScoreText: {fileID: 7393120564704262453}
   highScoreText: {fileID: 2283855076774500279}
-  headerText: {fileID: 0}
+  headerText: {fileID: 3111268280157062938}
+  drunkUI: {fileID: 2103069000}
+  damageUI: {fileID: 360533576}
 --- !u!224 &2683207043495960229
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28223,8 +28227,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -223.08862, y: -119.27075}
-  m_SizeDelta: {x: 954.1653, y: 238.54132}
+  m_AnchoredPosition: {x: -223.08862, y: -121.45288}
+  m_SizeDelta: {x: 1783.3557, y: 242.9055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &5347281822384382686
 RectTransform:
@@ -28686,7 +28690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &6663951406364376569
 CanvasRenderer:
   m_ObjectHideFlags: 0
