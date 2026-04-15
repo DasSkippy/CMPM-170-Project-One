@@ -11,6 +11,8 @@ public class LoseMenu : MonoBehaviour
     // HeaderText
     public TextMeshProUGUI headerText;
 
+    public GameObject drunkUI, damageUI;
+
     int highScore;
 
     private void Start()
@@ -26,10 +28,14 @@ public class LoseMenu : MonoBehaviour
         if (deathVersion == 0)
         {
             headerText.text = "You Got Sober!\nYou Lose!";
+            drunkUI.SetActive(true);
+            damageUI.SetActive(false);
         }
         else if (deathVersion == 1)
         {
             headerText.text = "You Totaled Your Car!\nYou Lose!";
+            drunkUI.SetActive(false);
+            damageUI.SetActive(true);
         }
     }
 
@@ -40,6 +46,6 @@ public class LoseMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Main Menu");
     }
 }

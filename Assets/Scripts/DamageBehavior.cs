@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class DamageBehavior : MonoBehaviour
 {
-    public int health = 100;
+    public float health = 100;
     int damage = 5;
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
-            Debug.Log("You hit " + collision.gameObject.name);
+            //Debug.Log("You hit " + collision.gameObject.name);
             TakeDamage();
         }
     }
