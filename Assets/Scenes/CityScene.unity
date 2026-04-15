@@ -22784,7 +22784,7 @@ MonoBehaviour:
   spawnRate: 3
   maxHealthPacks: 3
   currentHealthPacks: 0
-  healthPackSpawnRate: 1
+  healthPackSpawnRate: 3
   healthPackHeightOffset: 1
 --- !u!114 &1918047669
 MonoBehaviour:

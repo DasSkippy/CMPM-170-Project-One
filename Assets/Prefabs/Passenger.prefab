@@ -164,6 +164,8 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: df8ef26ef92d4c04d805f944d7003526, type: 3}
   - name: Nick
     image: {fileID: 21300000, guid: 591f4157466ac5f4db7411617bbe4aff, type: 3}
+  - name: Bryce
+    image: {fileID: 21300000, guid: 265d36bf63d27f34ebc4ea6e021a718a, type: 3}
 --- !u!135 &7326298882076769648
 SphereCollider:
   m_ObjectHideFlags: 0
