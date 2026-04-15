@@ -26,4 +26,8 @@ public class DamageBehavior : MonoBehaviour
             Debug.Log("You Lose");
         }
     }
+    public void Heal(float healAmount)
+    {
+        health += (int)healAmount;
+    }
 }

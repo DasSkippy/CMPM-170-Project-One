@@ -20,6 +20,10 @@ public class DamageBar : MonoBehaviour
         {
             damageBehavior.TakeDamage();
         }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Heal(20f);
+        }
     }
 
     private void SetHealthBar()
@@ -28,5 +32,12 @@ public class DamageBar : MonoBehaviour
         if (healthScalex > 6.4f)
             healthScalex = 6.4f;
         healthMeter.localScale = new Vector3 (6.4f * (damageBehavior.health / maxHealth), 1f, 1f);
+    }
+
+    public void Heal(float healAmount)
+    {
+        damageBehavior.Heal(healAmount);
+        if (damageBehavior.health > maxHealth)
+            damageBehavior.health = (int)maxHealth;
     }
 }

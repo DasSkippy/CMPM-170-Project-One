@@ -22450,6 +22450,7 @@ GameObject:
   - component: {fileID: 1918047666}
   - component: {fileID: 1918047668}
   - component: {fileID: 1918047669}
+  - component: {fileID: 1918047670}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -22503,11 +22504,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottle: {fileID: 8933525133533481715, guid: 5d5f54770c8c5e44883b27782d950667, type: 3}
+  MedBox: {fileID: 1712029237304932, guid: eec1043988e994b02bcff37595587a1f, type: 3}
   cityCorner1: {fileID: 396694892}
   cityCorner2: {fileID: 1542659128}
   maxBottles: 10
   currentBottles: 0
   spawnRate: 3
+  maxHealthPacks: 3
+  currentHealthPacks: 0
+  healthPackSpawnRate: 1
+  healthPackHeightOffset: 1
 --- !u!114 &1918047669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22525,6 +22531,19 @@ MonoBehaviour:
   drunkRate: 1
   drunkTime: 0.5
   drunkMaxAmount: 100
+--- !u!114 &1918047670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918047665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ecd22d6ae94bf4a8db6fc4a206cc8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthMeter: {fileID: 5644479293766015499}
 --- !u!1001 &1920655535
 PrefabInstance:
   m_ObjectHideFlags: 0

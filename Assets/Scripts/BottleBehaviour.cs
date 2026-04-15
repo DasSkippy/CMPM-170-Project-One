@@ -24,6 +24,7 @@ public class BottleBehaviour : MonoBehaviour
                 Destroy(gameObject);
                 powerupSpawns.currentBottles--;
                 collected = true;
+                Debug.Log("bottle collected");
             }
         }
     }
