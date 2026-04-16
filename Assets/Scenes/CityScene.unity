@@ -7829,6 +7829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera Midpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 4272684959694403164, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6837034716030152567, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -22819,6 +22823,7 @@ MonoBehaviour:
   eyesAnimator: {fileID: 1197634541}
   minBlinkTime: 10
   maxBlinkTime: 50
+  BlinkAudio: {fileID: 8300000, guid: e78c2feb13b344e469677bfa78ef62b3, type: 3}
 --- !u!1001 &1920655535
 PrefabInstance:
   m_ObjectHideFlags: 0

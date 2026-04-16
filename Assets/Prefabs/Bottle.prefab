@@ -392,6 +392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addDrunk: 15
+  Drinking: {fileID: 8300000, guid: 9aafd6a8b5aead046b56ecd139213e78, type: 3}
 --- !u!135 &7022767352169159580
 SphereCollider:
   m_ObjectHideFlags: 0
