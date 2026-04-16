@@ -20435,10 +20435,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drunkBar: {fileID: 0}
-  minSwerveInterval: 1
-  maxSwerveInterval: 4
-  maxSwerveAngle: 30
-  swerveSmoothness: 3
+  minSwerveInterval: 0.5
+  maxSwerveInterval: 1
+  maxSwerveAngle: 45
+  swerveSmoothness: 5
 --- !u!1001 &1725243511
 PrefabInstance:
   m_ObjectHideFlags: 0

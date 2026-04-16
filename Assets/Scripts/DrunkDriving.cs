@@ -25,11 +25,9 @@ public class DrunkDriving : MonoBehaviour
 
     void Update()
     {
-        if (drunkBar == null) return;
+        if (drunkBar == null) return;        
 
-        bool isDriving = Input.GetKey(KeyCode.W);
-
-        if (!isDriving)
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.UpArrow))
         {
             targetSwerve = 0f;
             currentSwerve = Mathf.Lerp(currentSwerve, 0f, Time.deltaTime * swerveSmoothness);
