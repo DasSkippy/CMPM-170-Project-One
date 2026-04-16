@@ -16,6 +16,12 @@ public class GameManager : MonoBehaviour
     public GameObject pauseUI;
     public GameObject loseUI;
 
+    private void Start()
+    {
+        Application.targetFrameRate = 144;
+        QualitySettings.vSyncCount = 1;
+    }
+
     private void Update()
     {
         myText.text = passengersDroppedOff.ToString();
