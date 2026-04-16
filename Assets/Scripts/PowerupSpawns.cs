@@ -14,7 +14,6 @@ public class PowerupSpawns : MonoBehaviour
     public int maxHealthPacks;
     public int currentHealthPacks;
     public float healthPackSpawnRate;
-    public float healthPackHeightOffset = 1.0f;
 
     private void Start()
     {
