@@ -11,11 +11,15 @@ public class CarBehavior : MonoBehaviour
     public bool passengerLoaded = false;
     public Image passengerImage;
 
+    private AudioSource carAudioSource;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         myRb = GetComponent<Rigidbody>();
+        carAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +34,8 @@ public class CarBehavior : MonoBehaviour
         float move = Input.GetAxis("Vertical");
         Vector3 myVelocity = transform.forward * speed * move;
         myVelocity.y = myRb.linearVelocity.y;
+
+        
 
         myRb.linearVelocity = myVelocity;
     }
