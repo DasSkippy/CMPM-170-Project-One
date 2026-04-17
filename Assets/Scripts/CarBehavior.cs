@@ -11,11 +11,18 @@ public class CarBehavior : MonoBehaviour
     public bool passengerLoaded = false;
     public Image passengerImage;
 
+    [SerializeField] private AudioSource revAudioSource;
+    [SerializeField] private AudioSource steadyAudioSource;
+
+    // private AudioSource carAudioSource;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         myRb = GetComponent<Rigidbody>();
+        // carAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,6 +30,8 @@ public class CarBehavior : MonoBehaviour
     {
         Drive();
         Turn();
+        HandleDrivingSound();
+        HandleRevSound();
     }
 
     private void Drive()
@@ -51,6 +60,52 @@ public class CarBehavior : MonoBehaviour
         if (forwardSpeed < 0) turnAmount = -turnAmount;
 
         transform.Rotate(Vector3.up, turnAmount);
+    }
+
+    //audios
+    private void HandleDrivingSound()
+    {
+        float moveInput = Input.GetAxis("Vertical");
+        bool isMoving = Mathf.Abs(moveInput) > 0.1f;
+
+        if (isMoving)
+        {
+            if (!steadyAudioSource.isPlaying)
+            {
+                steadyAudioSource.Play();
+            }
+        }
+        else
+        {
+            if (steadyAudioSource.isPlaying)
+            {
+                steadyAudioSource.Stop();
+            }
+        }
+    }
+
+    private void HandleRevSound()
+    {
+        float turnInput = Input.GetAxis("Horizontal");
+        float moveInput = Input.GetAxis("Vertical");
+
+        bool isTurning = Mathf.Abs(turnInput) > 0.1f;
+        bool isMoving = Mathf.Abs(moveInput) > 0.1f;
+
+        if (isTurning && isMoving)
+        {
+            if (!revAudioSource.isPlaying)
+            {
+                revAudioSource.Play();
+            }
+        }
+        else
+        {
+            if (revAudioSource.isPlaying)
+            {
+                revAudioSource.Stop();
+            }
+        }
     }
 
     public void LoadPassenger(PassengerInfo currentInfo)
