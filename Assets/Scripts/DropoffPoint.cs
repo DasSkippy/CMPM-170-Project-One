@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Unity.Collections.AllocatorManager;
 
 public class DropoffPoint : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class DropoffPoint : MonoBehaviour
     private PickupDropoffBehavior pickupDropoffBehavior;
     private CarBehavior carBehavior;
     private DrunkBar drunkBar;
+    public AudioClip close;
 
     private void Start()
     {
@@ -33,6 +35,7 @@ public class DropoffPoint : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(false);
         carBehavior.passengerLoaded = false;
         carBehavior.passengerImage.gameObject.SetActive(false);
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().PlayOneShot(close);
     }
 
     public void Activate()

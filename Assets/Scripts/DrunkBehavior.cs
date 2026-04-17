@@ -18,7 +18,7 @@ public class DrunkBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         eyesAnimator.SetTrigger("blink");
-        AudioSource.PlayClipAtPoint(BlinkAudio, Camera.main.transform.position);
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().PlayOneShot(BlinkAudio);
         StartCoroutine(Blink(Random.Range(minBlinkTime, maxBlinkTime)));
     }
 }

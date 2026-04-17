@@ -1251,6 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActiveDropoff: 0
+  close: {fileID: 8300000, guid: 66d531371c4f1164d855daec584f4379, type: 3}
 --- !u!135 &129794962
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7868,6 +7869,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 961588813802166570, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1734679827}
+    - targetCorrespondingSourceObject: {fileID: 961588813802166570, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1734679832}
   m_SourcePrefab: {fileID: 100100000, guid: d39f7eb73cfc11441b6e2af1f8a30ae7, type: 3}
 --- !u!1001 &631697655
 PrefabInstance:
@@ -8501,6 +8505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActiveDropoff: 0
+  close: {fileID: 8300000, guid: 66d531371c4f1164d855daec584f4379, type: 3}
 --- !u!135 &689655139
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12582,6 +12587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActiveDropoff: 0
+  close: {fileID: 8300000, guid: 66d531371c4f1164d855daec584f4379, type: 3}
 --- !u!135 &985488760
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17251,6 +17257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActiveDropoff: 0
+  close: {fileID: 8300000, guid: 66d531371c4f1164d855daec584f4379, type: 3}
 --- !u!135 &1509818713
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17521,6 +17528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActiveDropoff: 0
+  close: {fileID: 8300000, guid: 66d531371c4f1164d855daec584f4379, type: 3}
 --- !u!135 &1526774185
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20160,6 +20168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActiveDropoff: 0
+  close: {fileID: 8300000, guid: 66d531371c4f1164d855daec584f4379, type: 3}
 --- !u!135 &1680741858
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20815,6 +20824,103 @@ MonoBehaviour:
   invertLensDistortionMeter: 1
   soberLensDistortionIntensity: 0.75
   maxLensDistortionIntensity: 0
+--- !u!82 &1734679832
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734679825}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1744552830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21818,6 +21924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActiveDropoff: 0
+  close: {fileID: 8300000, guid: 66d531371c4f1164d855daec584f4379, type: 3}
 --- !u!135 &1816369870
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22789,7 +22896,6 @@ MonoBehaviour:
   maxHealthPacks: 3
   currentHealthPacks: 0
   healthPackSpawnRate: 3
-  healthPackHeightOffset: 1
 --- !u!114 &1918047669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24444,6 +24550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActiveDropoff: 0
+  close: {fileID: 8300000, guid: 66d531371c4f1164d855daec584f4379, type: 3}
 --- !u!135 &2040414078
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27152,6 +27259,7 @@ MonoBehaviour:
   headerText: {fileID: 3111268280157062938}
   drunkUI: {fileID: 2103069000}
   damageUI: {fileID: 360533576}
+  click: {fileID: 8300000, guid: f5358ff3b7d2b954b9fd0ac86155c98e, type: 3}
 --- !u!224 &2683207043495960229
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28551,6 +28659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbfac55d5b831a4fa2cd8b5cb495c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  click: {fileID: 8300000, guid: f5358ff3b7d2b954b9fd0ac86155c98e, type: 3}
 --- !u!224 &6534397135412527035
 RectTransform:
   m_ObjectHideFlags: 0
