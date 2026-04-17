@@ -11289,7 +11289,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 564124645}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12446,6 +12446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 8300000, guid: f5358ff3b7d2b954b9fd0ac86155c98e, type: 3}
+  menu: {fileID: 1521266825}
+  credits: {fileID: 1536136943}
 --- !u!4 &566102310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 610692332787289416, guid: 9fa52852d69b91f4f8edf417ef7a5c32, type: 3}
@@ -22807,7 +22809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1521266826
 RectTransform:
   m_ObjectHideFlags: 0
