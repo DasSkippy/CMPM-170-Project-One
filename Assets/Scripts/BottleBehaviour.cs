@@ -5,6 +5,7 @@ public class BottleBehaviour : MonoBehaviour
     private DrunkBar drunkBar;
     public float addDrunk;
     private bool collected = false;
+    public AudioClip Drinking;
 
     private PowerupSpawns powerupSpawns;
 
@@ -22,8 +23,10 @@ public class BottleBehaviour : MonoBehaviour
             {
                 drunkBar.GetDrunk(addDrunk);
                 Destroy(gameObject);
+                AudioSource.PlayClipAtPoint(Drinking, Camera.main.transform.position);
                 powerupSpawns.currentBottles--;
                 collected = true;
+                Debug.Log("bottle collected");
             }
         }
     }

@@ -24,7 +24,8 @@ public class SunCycle : MonoBehaviour
         //Day
         if (xRotation > 0f && xRotation < 180f)
         {
-            headlights.SetActive(false);
+            if(headlights != null)
+                headlights.SetActive(false);
             sunlight.intensity = 2;
             if (RenderSettings.skybox != daySkybox)
             {
@@ -35,7 +36,9 @@ public class SunCycle : MonoBehaviour
         else
         {
             //Night
-            headlights.SetActive(true);
+            if(headlights != null)
+                headlights.SetActive(true);
+
             sunlight.intensity = 0;
             if (RenderSettings.skybox != nightSkybox)
             {

@@ -6,12 +6,14 @@ public class DropoffPoint : MonoBehaviour
     private GameManager gameManager;
     private PickupDropoffBehavior pickupDropoffBehavior;
     private CarBehavior carBehavior;
+    private DrunkBar drunkBar;
 
     private void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
         pickupDropoffBehavior = FindFirstObjectByType<PickupDropoffBehavior>();
         carBehavior = FindFirstObjectByType<CarBehavior>();
+        drunkBar = FindFirstObjectByType<DrunkBar>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,6 +28,7 @@ public class DropoffPoint : MonoBehaviour
     {
         isActiveDropoff = false;
         gameManager.passengersDroppedOff++;
+        drunkBar.IncreaseDifficulty();
         pickupDropoffBehavior.passengerSpawned = false;
         transform.GetChild(0).gameObject.SetActive(false);
         carBehavior.passengerLoaded = false;

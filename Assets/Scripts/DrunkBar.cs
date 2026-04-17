@@ -6,6 +6,7 @@ public class DrunkBar : MonoBehaviour
     public Transform drunkMeter;
     public float drunkAmount;
     public float drunkRate;
+    public float drunkRateIncrease = 1.10f;
     public float drunkTime;
     public float drunkMaxAmount = 100f;
 
@@ -28,7 +29,7 @@ public class DrunkBar : MonoBehaviour
         if (drunkAmount <= 0)
         {
             drunkAmount = 0;
-            gameManager.Lose();
+            gameManager.Lose(0);
         }
     }
 
@@ -54,5 +55,10 @@ public class DrunkBar : MonoBehaviour
         if (drunkScalex > 6.4f)
             drunkScalex = 6.4f;
         drunkMeter.localScale = new Vector3(drunkScalex, 1f, 1f);
+    }
+
+    public void IncreaseDifficulty()
+    {
+        drunkRate = drunkRate * drunkRateIncrease;
     }
 }

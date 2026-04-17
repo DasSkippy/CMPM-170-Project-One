@@ -5,24 +5,33 @@ public class GameManager : MonoBehaviour
 {
     public int passengersDroppedOff;
     public TextMeshProUGUI myText;
+    public LoseMenu loseMenu;
 
     public bool gamePaused = false;
+    private bool pausable = true;
+    private bool lost = false;
 
     //UI Menus
     public GameObject inGameUI;
     public GameObject pauseUI;
     public GameObject loseUI;
 
+    private void Start()
+    {
+        Application.targetFrameRate = 144;
+        QualitySettings.vSyncCount = 1;
+    }
+
     private void Update()
     {
         myText.text = passengersDroppedOff.ToString();
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && pausable)
             gamePaused = !gamePaused;
 
-        if (gamePaused)
+        if (gamePaused && !lost)
             PauseGame();
-        else
+        else if (!gamePaused && !lost)
             UnpauseGame();
     }
 
@@ -37,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     private void UnpauseGame()
     {
+        Debug.Log("unpause");
         inGameUI.SetActive(true);
         pauseUI.SetActive(false);
         Time.timeScale = 1f;
@@ -44,12 +54,15 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void Lose()
+    public void Lose(int loseType)
     {
+        lost = true;
+        pausable = false;
         inGameUI.SetActive(false);
         loseUI.SetActive(true);
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        loseMenu.SetHeader(loseType);
     }
 }

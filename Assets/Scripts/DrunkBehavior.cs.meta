@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: ecabc9ded3fe8be469b33a5ddb7d82ef
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - eyesAnimator: {instanceID: 0}
+  - BlinkAudio: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
