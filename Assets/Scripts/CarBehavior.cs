@@ -14,8 +14,6 @@ public class CarBehavior : MonoBehaviour
     [SerializeField] private AudioSource revAudioSource;
     [SerializeField] private AudioSource steadyAudioSource;
 
-    // private AudioSource carAudioSource;
-
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -41,6 +39,9 @@ public class CarBehavior : MonoBehaviour
         myVelocity.y = myRb.linearVelocity.y;
 
         myRb.linearVelocity = myVelocity;
+
+        //play sound FX
+        // SoundFXManager.instance.PlaySoundFXClip(drivingSound, transform, 1f);
     }
 
     //ChatGPT assisted with Turn() to get car to turn only when moving
@@ -62,7 +63,7 @@ public class CarBehavior : MonoBehaviour
         transform.Rotate(Vector3.up, turnAmount);
     }
 
-    //audios
+    //consistent driving sound when car is driving regularly
     private void HandleDrivingSound()
     {
         float moveInput = Input.GetAxis("Vertical");
@@ -83,7 +84,8 @@ public class CarBehavior : MonoBehaviour
             }
         }
     }
-
+    
+    //adding sound when car turns
     private void HandleRevSound()
     {
         float turnInput = Input.GetAxis("Horizontal");
