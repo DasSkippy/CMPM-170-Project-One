@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using static Unity.Collections.AllocatorManager;
 
 [System.Serializable]
 public class PassengerInfo
@@ -16,6 +17,7 @@ public class PassangerBehavior : MonoBehaviour
     private PassengerInfo currentID;
     private CarBehavior carBehavior;
     private Transform car;
+    public AudioClip open;
 
     public void Start()
     {
@@ -55,5 +57,6 @@ public class PassangerBehavior : MonoBehaviour
         gameObject.SetActive(false);
         carBehavior.LoadPassenger(currentID);
         Debug.Log("Picked up " + currentID.name);
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().PlayOneShot(open);
     }
 }

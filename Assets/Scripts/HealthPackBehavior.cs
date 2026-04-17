@@ -1,10 +1,12 @@
 using UnityEngine;
+using static Unity.Collections.AllocatorManager;
 
 public class HealthPackBehavior : MonoBehaviour
 {
     private DamageBar damageBar;
     public float healAmount;
     private bool collected = false;
+    public AudioClip wrench;
 
     private PowerupSpawns powerupSpawns;
     
@@ -25,6 +27,7 @@ public class HealthPackBehavior : MonoBehaviour
                 Destroy(gameObject);
                 powerupSpawns.currentHealthPacks--;
                 Debug.Log("health pack collected");
+                GameObject.Find("Main Camera").GetComponent<AudioSource>().PlayOneShot(wrench);
             }
         }
     }

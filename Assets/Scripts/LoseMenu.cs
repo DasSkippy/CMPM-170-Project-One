@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using static Unity.Collections.AllocatorManager;
 
 public class LoseMenu : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class LoseMenu : MonoBehaviour
     public TextMeshProUGUI headerText;
 
     public GameObject drunkUI, damageUI;
+
+    public AudioClip click;
 
     int highScore;
 
@@ -42,10 +45,12 @@ public class LoseMenu : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("CityScene");
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().PlayOneShot(click);
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("Main Menu");
+        GameObject.Find("Main Camera").GetComponent<AudioSource>().PlayOneShot(click);
     }
 }

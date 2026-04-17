@@ -35,36 +35,46 @@ public class PowerupSpawns : MonoBehaviour
 
     private IEnumerator SpawnTime(float time)
     {
-        yield return new WaitForSeconds(time);
-        if(currentBottles < maxBottles)
+        while (true)
+    {
+        if (currentBottles < maxBottles)
+        {
             SpawnPowerup();
+        }
+
+        yield return new WaitForSeconds(spawnRate);
+    }
     }
 
     void SpawnPowerup()
     {
+        bool spawned = false;
 
-        Vector3 randomPos = new Vector3(
-            Random.Range(cityCorner1.position.x, cityCorner2.position.x),
-            50f,
-            Random.Range(cityCorner1.position.z, cityCorner2.position.z)
-        );
-
-        // Debug.Log(randomPos);
-
-        RaycastHit hit;
-        if (Physics.Raycast(randomPos, Vector3.down, out hit, 100f))
+        while (!spawned)
         {
-            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Road"))
-            {
-                Instantiate(bottle, hit.point, Quaternion.identity);
-                Debug.Log("bottle spawned");
-                currentBottles++;
+            Vector3 randomPos = new Vector3(
+                Random.Range(cityCorner1.position.x, cityCorner2.position.x),
+                50f,
+                Random.Range(cityCorner1.position.z, cityCorner2.position.z)
+            );
 
+            RaycastHit hit;
+            if (Physics.Raycast(randomPos, Vector3.down, out hit, 100f))
+            {
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Road"))
+                {
+                    Instantiate(bottle, hit.point, Quaternion.identity);
+                    Debug.Log("bottle spawned");
+                    currentBottles++;
+
+                    spawned = true; // exit loop
+                }
             }
         }
+
         StartCoroutine(SpawnTime(spawnRate));
     }
-    
+
     void SpawnHealthPack()
     {
         Vector3 spawnPoint = new Vector3(

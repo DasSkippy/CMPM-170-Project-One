@@ -23,7 +23,7 @@ public class BottleBehaviour : MonoBehaviour
             {
                 drunkBar.GetDrunk(addDrunk);
                 Destroy(gameObject);
-                AudioSource.PlayClipAtPoint(Drinking, Camera.main.transform.position);
+                GameObject.Find("Main Camera").GetComponent<AudioSource>().PlayOneShot(Drinking);
                 powerupSpawns.currentBottles--;
                 collected = true;
                 Debug.Log("bottle collected");
